@@ -2,11 +2,14 @@
     <div>
         <detail-banner 
             :bannerImg="bannerImg"
-            :sightName="sightName"     
+            :sightName="sightName"   
+            :gallaryImgs="gallaryImgs"  
         ></detail-banner>
-        <detail-header
+        <!-- <detail-header
             
-        ></detail-header>
+        ></detail-header> -->
+        
+
     </div>
 </template>
 
@@ -14,17 +17,20 @@
 import axios from "axios";
 import DetailBanner from "./components/Banner";
 import DetailHeader from "./components/Header";
+
 export default {
   name: "Detail",
   data() {
       return {
           bannerImg: '',
-          sightName: ''
+          sightName: '',
+          gallaryImgs:[]
       }
   },
   components: {
     DetailBanner,
     DetailHeader
+    
   },
   methods: {
       getDetailInfo() {
@@ -36,6 +42,7 @@ export default {
                        console.log(data)
                        this.bannerImg=data.data.bannerImg
                        this.sightName=data.data.sightName
+                       this.gallaryImgs=data.data.gallaryImgs
                    }
                 })
       }
