@@ -5,9 +5,10 @@
             :sightName="sightName"   
             :gallaryImgs="gallaryImgs"  
         ></detail-banner>
-        <!-- <detail-header
+        <detail-header
             
-        ></detail-header> -->
+        ></detail-header>
+        <div style="height:1000px"></div>
         
 
     </div>
