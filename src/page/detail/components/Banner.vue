@@ -10,16 +10,19 @@
                 </div>
             </div>
         </div>
-        <gallery 
-            :list="gallaryImgs" 
-            v-show="showGallery"
-            @close="handleGalleryClose"
-        ></gallery>
+        <fade-animation>
+            <gallery 
+                :list="gallaryImgs" 
+                v-show="showGallery"
+                @close="handleGalleryClose"
+            ></gallery>
+        </fade-animation>
     </div>
 </template>
 
 <script>
 import Gallery from "comment/gallery/Gallery";
+import FadeAnimation from "comment/fade/FadeAnimation";
 export default {
   props: {
     bannerImg: String,
@@ -32,7 +35,8 @@ export default {
     };
   },
   components: {
-    Gallery
+    Gallery,
+    FadeAnimation
   },
   methods: {
     handleBannerClick() {

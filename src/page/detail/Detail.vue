@@ -5,11 +5,11 @@
             :sightName="sightName"   
             :gallaryImgs="gallaryImgs"  
         ></detail-banner>
-        <detail-header
-            
-        ></detail-header>
-        <div style="height:1000px"></div>
-        
+        <detail-header></detail-header>
+        <div class="content">
+            <detail-list :list="categoryList"></detail-list>
+        </div>
+        <div style="height:1000px;"></div>       
 
     </div>
 </template>
@@ -18,6 +18,7 @@
 import axios from "axios";
 import DetailBanner from "./components/Banner";
 import DetailHeader from "./components/Header";
+import DetailList from "./components/List";
 
 export default {
   name: "Detail",
@@ -25,12 +26,14 @@ export default {
       return {
           bannerImg: '',
           sightName: '',
-          gallaryImgs:[]
+          gallaryImgs:[],
+          categoryList:[]
       }
   },
   components: {
     DetailBanner,
-    DetailHeader
+    DetailHeader,
+    DetailList
     
   },
   methods: {
@@ -44,6 +47,7 @@ export default {
                        this.bannerImg=data.data.bannerImg
                        this.sightName=data.data.sightName
                        this.gallaryImgs=data.data.gallaryImgs
+                       this.categoryList=data.data.categoryList
                    }
                 })
       }

@@ -40,6 +40,9 @@ export default {
   },
   activated() {
     window.addEventListener("scroll", this.handleScroll);
+  },
+  deactivated() { //解绑事件
+      window.removeEventListener("scroll", this.handleScroll)
   }
 };
 </script>
@@ -64,6 +67,7 @@ export default {
 }
 
 .header-fixed {
+    z-index 99
     position: fixed;
     top: 0;
     left: 0;
