@@ -9,8 +9,7 @@
         <div class="content">
             <detail-list :list="categoryList"></detail-list>
         </div>
-        <div style="height:1000px;"></div>       
-
+        <div style="height:1000px;"></div>              
     </div>
 </template>
 
@@ -27,7 +26,8 @@ export default {
           bannerImg: '',
           sightName: '',
           gallaryImgs:[],
-          categoryList:[]
+          categoryList:[],
+          boxShow:false
       }
   },
   components: {
@@ -59,4 +59,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
 </style>

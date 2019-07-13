@@ -11,8 +11,8 @@
             </div>
         </div>
         <fade-animation>
-            <gallery 
-                :list="gallaryImgs" 
+            <gallery     
+                :list="gallaryImgs"
                 v-show="showGallery"
                 @close="handleGalleryClose"
             ></gallery>
@@ -27,7 +27,8 @@ export default {
   props: {
     bannerImg: String,
     sightName: String,
-    gallaryImgs: Array
+    gallaryImgs: Array,
+    
   },
   data() {
     return {
@@ -50,6 +51,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
+
 .banner {
     position: relative;
     overflow: hidden;

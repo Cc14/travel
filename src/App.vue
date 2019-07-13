@@ -1,15 +1,22 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <keep-alive exclude="Detail">
     <router-view/>
+    
     </keep-alive>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+  data() {
+    return {
+      show: true
+    };
+  }
+};
 </script>
 
 <style>
@@ -21,4 +28,5 @@ export default {
   color: #2c3e50;
   background: #f5f5f5
 }
+
 </style>

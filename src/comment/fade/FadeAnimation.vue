@@ -11,15 +11,13 @@
 </script>
 
 <style lang="stylus" scoped>
+
+
 .v-enter-active, .v-leave-active {
-  transition: all  2s;
+  transition: opacity .5s;
 }
-.v-enter, .v-leave-to {
-  opacity 0
-  transform translateX(100%)
+.v-enter, .v-leave-to{
+  opacity: 0;
 }
-// .v-enter
-//     opacity 1
-// .v-enter-active
-//     transition: all  2s;
+
 </style>

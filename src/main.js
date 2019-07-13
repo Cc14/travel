@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick' //解决点击延长300ms\
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import store from './store';
+import 'babel-polyfill'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
